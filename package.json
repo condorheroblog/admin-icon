@@ -1,0 +1,64 @@
+{
+	"name": "admin-icon",
+	"type": "module",
+	"version": "0.0.0",
+	"description": "Admin Icon",
+	"author": {
+		"name": "Condor Hero"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/condorheroblog/admin-icon/blob/main/README.md",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/condorheroblog/admin-icon.git"
+	},
+	"bugs": {
+		"url": "https://github.com/condorheroblog/admin-icon/issues"
+	},
+	"keywords": [
+		"icon",
+		"admin icon",
+		"iconify",
+		"preset-icon"
+	],
+	"exports": {
+		"./*": "./*",
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		},
+		"./icons.json": "./dist/icons.json",
+		"./info.json": "./dist/info.json",
+		"./metadata.json": "./dist/metadata.json"
+	},
+	"main": "dist/index.cjs",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.cts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsx src/build.ts",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"publish": "pnpm publish --no-git-checks --access=public",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"@antfu/eslint-config": "^6.2.0",
+		"@iconify/tools": "^5.0.0",
+		"@iconify/types": "^2.0.0",
+		"@iconify/utils": "^3.1.0",
+		"@types/node": "^24.10.1",
+		"@vue/theme": "2.3.0",
+		"chalk": "4.1.2",
+		"pnpm": "^10.24.0",
+		"tsx": "^4.21.0",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.14"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org"
+	}
+}

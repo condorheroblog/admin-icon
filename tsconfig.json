@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": ["ESNext", "dom"],
+		"module": "ESNext",
+
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+
+		/* Linting */
+		"strict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noEmit": true,
+		"isolatedModules": true,
+		"skipLibCheck": true
+	},
+	"include": ["**/*", "./vite.config.ts"],
+	"exclude": ["dist", "node_modules"]
+}
